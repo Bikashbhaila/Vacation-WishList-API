@@ -102,7 +102,10 @@ server.delete("/destinations", (req, res) => {
 })
 
 
+// creating port for global deployment
+const PORT = process.env.PORT || 3000;  // add port and use that port, if local then use 3000
+
 // making express server listen to port 3000
-server.listen(3000, () => {
+server.listen(PORT, () => {
     console.log("server listening on port 3000");
 });
