@@ -1,5 +1,5 @@
 const express = require("express");
-// const cors = require("cors");
+const cors = require("cors");
 
 const { db: destinations } = require("./DB")
 
@@ -10,6 +10,9 @@ const server = express();   // this server is deaf -- not listening to jack
 
 // tell the server to use express.json to parse json data => middleware needed to extract request's body for post and updates
 server.use(express.json());
+
+// use cors
+server.use(cors());
 
 
 // sending just some text
